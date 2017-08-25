@@ -1,0 +1,10 @@
+<form method="post">
+    {{ form.csrf_token() }}
+    <p>username{{ form.name }}</p>
+    <p>passwd{{ form.passwd }}</p>
+    <p>again{{ form.passwd2 }}</p>
+    <p>{{ form.submit }}</p>
+    {% for x in get_flashed_messages() %}
+        {{ x }}
+    {% endfor %}
+</form>
